@@ -1,5 +1,4 @@
 import mysql.connector
-from mysql.connector import Error
 
 def create_database():
     """Create the alx_book_store database"""
@@ -23,7 +22,7 @@ def create_database():
             # Close cursor
             cursor.close()
             
-    except Error as e:
+    except mysql.connector.Error as e:
         print(f"Error while connecting to MySQL: {e}")
         
     finally:
